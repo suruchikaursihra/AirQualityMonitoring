@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Spinner
+            android:id="@+id/Location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.60"
+            android:textSize="20dp" />
+
+
+        <ImageButton
+            android:id="@+id/BluetoothButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="false"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="0.11"
+            android:background="@color/bgc"
+            android:paddingLeft="0dp"
+            android:src="@drawable/bluetooth"
+            android:translationX="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:orientation="horizontal"
+        android:layout_weight="0.20">
+
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/graph"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/graph_real_time"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        >
+
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/graph2"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/datashow"
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_weight="0.38"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="190dp"
+                android:layout_height="44dp"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:text="TextView"
+                android:textAlignment="viewStart"
+                android:textSize="24sp"
+                tools:text="Date" />
+
+            <TextView
+                android:id="@+id/co2"
+                android:layout_width="190dp"
+                android:layout_height="44dp"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:text="CO2"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="190dp"
+                android:layout_height="44dp"
+                android:layout_column="1"
+                android:layout_row="0"
+                android:text="Time"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/co"
+                android:layout_width="190dp"
+                android:layout_height="44dp"
+                android:layout_column="1"
+                android:layout_row="1"
+                android:layout_weight="1"
+                android:text="CO"
+                android:textSize="24sp" />
+        </GridLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
